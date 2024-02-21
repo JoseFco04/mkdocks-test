@@ -33,15 +33,16 @@ jobs:
         run: |
           pip install mkdocs
           pip install mkdocs-material 
+          
       - name: Build MkDocs
         run: |
-          cd documentacion/guia-completa-mkdocs
           mkdocs build
+          
       - name: Push the documentation in a branch
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: mkdocs # The branch name where you want to push the assets
-          FOLDER: documentacion/guia-completa-mkdocs/site # The directory where your assets are generated
+          BRANCH: gh-pages # The branch name where you want to push the assets
+          FOLDER: site # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
