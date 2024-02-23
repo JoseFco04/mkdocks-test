@@ -6,9 +6,10 @@ nav:
     - Blog: blog.md
     - Práctica 01: Practica-01.md
     - Práctica 08: Practica-08.md
-theme: material
-    palette:
-        scheme: purple
+
+theme: 
+    name: material
+    color: purple
     font:
-        code: Open Sans
+        text: Open Sans
     language: es
