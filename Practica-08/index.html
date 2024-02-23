@@ -1,0 +1,1548 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica-01/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Práctica 08 - IAW Jose</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-01-08-iaw-jose-francisco-leon-lopez" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="IAW Jose" class="md-header__button md-logo" aria-label="IAW Jose" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IAW Jose
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica 08
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IAW Jose" class="md-nav__button md-logo" aria-label="IAW Jose" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IAW Jose
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Práctica 08
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 08
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#en-esta-practica-vamos-a-ver-como-instalar-prestashop-en-nuestra-maquina-de-amazon" class="md-nav__link">
+    <span class="md-ellipsis">
+      En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuestra-maquina-de-amazon-deberia-estar-asi-configurada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuestra máquina de amazon debería estar así configurada:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-tendriamos-que-crearle-un-grupo-de-seguridad-para-esta-practica-y-anadirlo-cuando-estemos-instalando-la-instancia-deberia-verse-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y tendriamos que crearle un grupo de seguridad para esta práctica y añadirlo cuando estemos instalando la instancia. Debería verse así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ahora-para-empezar-debemos-usar-el-archivo-phppsinfophp-que-descargamos-previamente-y-anadirlo-a-nuestra-carpeta-de-archivos-php-el-codigo-del-archivo-esta-en-el-repositorio-de-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ahora para empezar debemos usar el archivo phppsinfo.php que descargamos previamente y añadirlo a nuestra carpeta de archivos php. EL código del archivo esta en el repositorio de esta práctica.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-siguiente-que-tenemos-que-hacer-es-configurar-el-script-del-install_lamp-que-debemos-ejecutar-antes-de-hacer-la-practica-que-paso-por-paso-se-ve-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mostramos-todos-los-comandos-que-se-van-ejecutando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostramos todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-el-servidor-web-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos el servidor web Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-el-gestor-de-bases-de-datos-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos el gestor de bases de datos MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-conf-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo conf de apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciamos-el-servicio-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciamos el servicio de Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo de php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificamos-el-propietario-y-el-grupo-del-directorio-varwwwhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificamos el propietario y el grupo del directorio /var/www/html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previamente-deberiamos-haber-tenido-los-archivos-de-configuracion-000-defaultconf-y-el-htaccess-configurados-en-la-maquina-el-000default-se-deberia-de-ver-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previamente deberiamos haber tenido los archivos de configuración 000-default.conf y el .htaccess configurados en la máquina. El 000default se debería de ver así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-el-htaccess-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y el htaccess así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tambien-tenemos-que-crear-un-script-para-el-letsencrypt-para-el-tema-del-dominio-y-las-claves-de-seguridad-que-ya-hemos-usado-en-practicas-anteriores-paso-por-paso-el-script-es-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volvemos a mostrar todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importamos-el-archivo-de-variables-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importamos el archivo de variables .env
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-y-actualizamos-snapd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos y actualizamos snapd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalamos y actualizamos snapd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminamos-cualquier-instalacion-previa-de-certbot-con-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminamos cualquier instalación previa de certbot con apt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-la-aplicacion-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos la aplicación certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-un-alias-para-la-aplicacion-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creamos un alias para la aplicación certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutamos-el-comando-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutamos el comando certbot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-lo-maas-importante-de-la-practica-y-lo-que-realmente-cambia-de-las-otras-es-el-deploy-del-prestashop-y-el-env-que-es-el-archivo-con-las-variables-el-deploy-paso-por-paso-es-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volvemos a mostrar todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importamos-el-archivo-de-variables-env_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importamos el archivo de variables .env
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-la-base-de-datos-y-el-usuario-de-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creamos la base de datos y el usuario de la base de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminamos-instalaciones-previas-del-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminamos instalaciones previas del prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargamos-el-codigo-fuente-de-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargamos el codigo fuente de prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar unzip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borramos-las-cosas-previas-al-varwwwhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borramos las cosas previas al /var/www/html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-de-phppsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo de phppsinfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-los-archivos-de-dentro-del-zip-descargado-anteriormente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar los archivos de dentro del zip descargado anteriormente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-las-extensiones-php-para-poner-lo-recomendado-de-la-pagina-del-phppsinfophp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos las extensiones php para poner lo recomendado de la pagina del phppsinfo.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corregimos-los-archivos-con-el-comando-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corregimos los archivos con el comando set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciamos-el-servicio-de-apache_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciamos el servicio de apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-nuevo-archivo-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el nuevo archivo .htaccess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiamos-la-informacion-de-los-directorios-para-que-todos-puedan-escribir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambiamos la información de los directorios para que todos puedan escribir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos Prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-la-carpeta-de-install-por-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrar la carpeta de install por seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-el-archivo-env-con-las-variables-necesarias-para-ejecurtar-el-deploy-es-el-siguiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y el archivo .env con las variables necesarias para ejecurtar el deploy es el siguiente:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-vez-ejecutado-todo-accederiamos-a-nuestro-dominio-y-ya-tendriamos-prestashop-instalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una vez ejecutado todo accederiamos a nuestro dominio y ya tendriamos prestashop instalado.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#en-esta-practica-vamos-a-ver-como-instalar-prestashop-en-nuestra-maquina-de-amazon" class="md-nav__link">
+    <span class="md-ellipsis">
+      En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nuestra-maquina-de-amazon-deberia-estar-asi-configurada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuestra máquina de amazon debería estar así configurada:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-tendriamos-que-crearle-un-grupo-de-seguridad-para-esta-practica-y-anadirlo-cuando-estemos-instalando-la-instancia-deberia-verse-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y tendriamos que crearle un grupo de seguridad para esta práctica y añadirlo cuando estemos instalando la instancia. Debería verse así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ahora-para-empezar-debemos-usar-el-archivo-phppsinfophp-que-descargamos-previamente-y-anadirlo-a-nuestra-carpeta-de-archivos-php-el-codigo-del-archivo-esta-en-el-repositorio-de-esta-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ahora para empezar debemos usar el archivo phppsinfo.php que descargamos previamente y añadirlo a nuestra carpeta de archivos php. EL código del archivo esta en el repositorio de esta práctica.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lo-siguiente-que-tenemos-que-hacer-es-configurar-el-script-del-install_lamp-que-debemos-ejecutar-antes-de-hacer-la-practica-que-paso-por-paso-se-ve-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mostramos-todos-los-comandos-que-se-van-ejecutando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostramos todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-el-servidor-web-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos el servidor web Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-el-gestor-de-bases-de-datos-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos el gestor de bases de datos MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-conf-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo conf de apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciamos-el-servicio-de-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciamos el servicio de Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo de php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificamos-el-propietario-y-el-grupo-del-directorio-varwwwhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificamos el propietario y el grupo del directorio /var/www/html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#previamente-deberiamos-haber-tenido-los-archivos-de-configuracion-000-defaultconf-y-el-htaccess-configurados-en-la-maquina-el-000default-se-deberia-de-ver-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previamente deberiamos haber tenido los archivos de configuración 000-default.conf y el .htaccess configurados en la máquina. El 000default se debería de ver así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-el-htaccess-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y el htaccess así:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tambien-tenemos-que-crear-un-script-para-el-letsencrypt-para-el-tema-del-dominio-y-las-claves-de-seguridad-que-ya-hemos-usado-en-practicas-anteriores-paso-por-paso-el-script-es-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volvemos a mostrar todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importamos-el-archivo-de-variables-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importamos el archivo de variables .env
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-y-actualizamos-snapd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos y actualizamos snapd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalamos y actualizamos snapd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminamos-cualquier-instalacion-previa-de-certbot-con-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminamos cualquier instalación previa de certbot con apt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-la-aplicacion-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos la aplicación certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-un-alias-para-la-aplicacion-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creamos un alias para la aplicación certbot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutamos-el-comando-certbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejecutamos el comando certbot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-lo-maas-importante-de-la-practica-y-lo-que-realmente-cambia-de-las-otras-es-el-deploy-del-prestashop-y-el-env-que-es-el-archivo-con-las-variables-el-deploy-paso-por-paso-es-asi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volvemos a mostrar todos los comandos que se van ejecutando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-repositorios_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los repositorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizamos-los-paquetes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizamos los paquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importamos-el-archivo-de-variables-env_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importamos el archivo de variables .env
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creamos-la-base-de-datos-y-el-usuario-de-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creamos la base de datos y el usuario de la base de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminamos-instalaciones-previas-del-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminamos instalaciones previas del prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargamos-el-codigo-fuente-de-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargamos el codigo fuente de prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalar-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar unzip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borramos-las-cosas-previas-al-varwwwhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borramos las cosas previas al /var/www/html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-archivo-de-phppsinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el archivo de phppsinfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descargar-los-archivos-de-dentro-del-zip-descargado-anteriormente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descargar los archivos de dentro del zip descargado anteriormente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-las-extensiones-php-para-poner-lo-recomendado-de-la-pagina-del-phppsinfophp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos las extensiones php para poner lo recomendado de la pagina del phppsinfo.php
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corregimos-los-archivos-con-el-comando-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corregimos los archivos con el comando set
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reiniciamos-el-servicio-de-apache_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reiniciamos el servicio de apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copiamos-el-nuevo-archivo-htaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiamos el nuevo archivo .htaccess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambiamos-la-informacion-de-los-directorios-para-que-todos-puedan-escribir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambiamos la información de los directorios para que todos puedan escribir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalamos-prestashop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalamos Prestashop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#borrar-la-carpeta-de-install-por-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrar la carpeta de install por seguridad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#y-el-archivo-env-con-las-variables-necesarias-para-ejecurtar-el-deploy-es-el-siguiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Y el archivo .env con las variables necesarias para ejecurtar el deploy es el siguiente:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-vez-ejecutado-todo-accederiamos-a-nuestro-dominio-y-ya-tendriamos-prestashop-instalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una vez ejecutado todo accederiamos a nuestro dominio y ya tendriamos prestashop instalado.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practica-01-08-iaw-jose-francisco-leon-lopez">Practica-01-08-IAW Jose Francisco León López</h1>
+<h2 id="en-esta-practica-vamos-a-ver-como-instalar-prestashop-en-nuestra-maquina-de-amazon">En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:</h2>
+<h3 id="nuestra-maquina-de-amazon-deberia-estar-asi-configurada">Nuestra máquina de amazon debería estar así configurada:</h3>
+<p><img alt="1" src="https://github.com/JoseFco04/practica-01-08-IAW/assets/145347148/49defe99-c15d-4c10-8df8-48d8247b58f1" /></p>
+<h3 id="y-tendriamos-que-crearle-un-grupo-de-seguridad-para-esta-practica-y-anadirlo-cuando-estemos-instalando-la-instancia-deberia-verse-asi">Y tendriamos que crearle un grupo de seguridad para esta práctica y añadirlo cuando estemos instalando la instancia. Debería verse así:</h3>
+<p><img alt="2" src="https://github.com/JoseFco04/practica-01-08-IAW/assets/145347148/5c3dc2b7-c600-4817-9b6f-f95d5cdf1ce4" /></p>
+<h3 id="ahora-para-empezar-debemos-usar-el-archivo-phppsinfophp-que-descargamos-previamente-y-anadirlo-a-nuestra-carpeta-de-archivos-php-el-codigo-del-archivo-esta-en-el-repositorio-de-esta-practica">Ahora para empezar debemos usar el archivo phppsinfo.php que descargamos previamente y añadirlo a nuestra carpeta de archivos php. EL código del archivo esta en el repositorio de esta práctica.</h3>
+<h3 id="lo-siguiente-que-tenemos-que-hacer-es-configurar-el-script-del-install_lamp-que-debemos-ejecutar-antes-de-hacer-la-practica-que-paso-por-paso-se-ve-asi">Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:</h3>
+<h4 id="mostramos-todos-los-comandos-que-se-van-ejecutando">Mostramos todos los comandos que se van ejecutando</h4>
+<pre><code>set -ex
+</code></pre>
+<h4 id="actualizamos-los-repositorios">Actualizamos los repositorios</h4>
+<pre><code>apt update
+</code></pre>
+<h4 id="actualizamos-los-paquetes">Actualizamos los paquetes</h4>
+<pre><code>#apt upgrade -y
+</code></pre>
+<h4 id="instalamos-el-servidor-web-apache">Instalamos el servidor web Apache</h4>
+<pre><code>sudo apt install apache2 -y
+</code></pre>
+<h4 id="instalamos-el-gestor-de-bases-de-datos-mysql">Instalamos el gestor de bases de datos MySQL</h4>
+<pre><code>sudo apt install mysql-server -y
+</code></pre>
+<h4 id="instalamos-php">Instalamos PHP</h4>
+<pre><code>apt install php libapache2-mod-php php-mysql -y
+</code></pre>
+<h4 id="copiamos-el-archivo-conf-de-apache">Copiamos el archivo conf de apache</h4>
+<pre><code>cp ../conf/000-default.conf /etc/apache2/sites-available
+</code></pre>
+<h4 id="reiniciamos-el-servicio-de-apache">Reiniciamos el servicio de Apache</h4>
+<pre><code>systemctl restart apache2
+</code></pre>
+<h4 id="copiamos-el-archivo-de-php">Copiamos el archivo de php</h4>
+<pre><code>cp ../php/index.php /var/www/html
+</code></pre>
+<h4 id="modificamos-el-propietario-y-el-grupo-del-directorio-varwwwhtml">Modificamos el propietario y el grupo del directorio /var/www/html</h4>
+<pre><code>chown -R www-data:www-data /var/www/html
+</code></pre>
+<h3 id="previamente-deberiamos-haber-tenido-los-archivos-de-configuracion-000-defaultconf-y-el-htaccess-configurados-en-la-maquina-el-000default-se-deberia-de-ver-asi">Previamente deberiamos haber tenido los archivos de configuración 000-default.conf y el .htaccess configurados en la máquina. El 000default se debería de ver así:</h3>
+<pre><code>ServerSignature Off
+ServerTokens Prod
+&lt;VirtualHost *:80&gt;
+  #ServerName www.example.com
+  DocumentRoot /var/www/html
+  DirectoryIndex index.php index.html
+
+  &lt;Directory &quot;/var/www/html&quot;&gt;
+    AllowOverride All
+  &lt;/Directory&gt;
+
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+</code></pre>
+<h3 id="y-el-htaccess-asi">Y el htaccess así:</h3>
+<pre><code># BEGIN WordPress
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+&lt;/IfModule&gt;
+# END WordPress
+</code></pre>
+<h3 id="tambien-tenemos-que-crear-un-script-para-el-letsencrypt-para-el-tema-del-dominio-y-las-claves-de-seguridad-que-ya-hemos-usado-en-practicas-anteriores-paso-por-paso-el-script-es-asi">También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:</h3>
+<h4 id="volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando">Volvemos a mostrar todos los comandos que se van ejecutando</h4>
+<pre><code>set -ex
+</code></pre>
+<h4 id="actualizamos-los-repositorios_1">Actualizamos los repositorios</h4>
+<pre><code>apt update
+</code></pre>
+<h4 id="actualizamos-los-paquetes_1">Actualizamos los paquetes</h4>
+<pre><code>#apt upgrade -y
+</code></pre>
+<h4 id="importamos-el-archivo-de-variables-env">Importamos el archivo de variables .env</h4>
+<pre><code>source .env
+</code></pre>
+<h3 id="instalamos-y-actualizamos-snapd">Instalamos y actualizamos snapd</h3>
+<pre><code>snap install core &amp;&amp; snap refresh core
+</code></pre>
+<h4 id="eliminamos-cualquier-instalacion-previa-de-certbot-con-apt">Eliminamos cualquier instalación previa de certbot con apt</h4>
+<pre><code>apt remove certbot
+</code></pre>
+<h4 id="instalamos-la-aplicacion-certbot">Instalamos la aplicación certbot</h4>
+<pre><code>snap install --classic certbot
+</code></pre>
+<h4 id="creamos-un-alias-para-la-aplicacion-certbot">Creamos un alias para la aplicación certbot</h4>
+<pre><code>ln -fs /snap/bin/certbot /usr/bin/certbot
+</code></pre>
+<h4 id="ejecutamos-el-comando-certbot">Ejecutamos el comando certbot</h4>
+<pre><code>certbot --apache -m $CB_MAIL --agree-tos --no-eff-email -d $CB_DOMAIN --non-interactive
+</code></pre>
+<h3 id="y-lo-maas-importante-de-la-practica-y-lo-que-realmente-cambia-de-las-otras-es-el-deploy-del-prestashop-y-el-env-que-es-el-archivo-con-las-variables-el-deploy-paso-por-paso-es-asi">Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:</h3>
+<h4 id="volvemos-a-mostrar-todos-los-comandos-que-se-van-ejecutando_1">Volvemos a mostrar todos los comandos que se van ejecutando</h4>
+<pre><code>set -ex
+</code></pre>
+<h4 id="actualizamos-los-repositorios_2">Actualizamos los repositorios</h4>
+<pre><code>apt update
+</code></pre>
+<h4 id="actualizamos-los-paquetes_2">Actualizamos los paquetes</h4>
+<pre><code>#apt upgrade -y
+</code></pre>
+<h4 id="importamos-el-archivo-de-variables-env_1">Importamos el archivo de variables .env</h4>
+<pre><code>source .env
+</code></pre>
+<h4 id="creamos-la-base-de-datos-y-el-usuario-de-la-base-de-datos">Creamos la base de datos y el usuario de la base de datos</h4>
+<pre><code>mysql -u root &lt;&lt;&lt; &quot;DROP DATABASE IF EXISTS $PRESTASHOP_DB_NAME&quot;
+mysql -u root &lt;&lt;&lt; &quot;CREATE DATABASE $PRESTASHOP_DB_NAME&quot;
+mysql -u root &lt;&lt;&lt; &quot;DROP USER IF EXISTS $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER&quot;
+mysql -u root &lt;&lt;&lt; &quot;CREATE USER $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER IDENTIFIED BY '$PRESTASHOP_DB_PASSWORD'&quot;
+mysql -u root &lt;&lt;&lt; &quot;GRANT ALL PRIVILEGES ON $PRESTASHOP_DB_NAME.* TO $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER&quot;
+</code></pre>
+<h4 id="eliminamos-instalaciones-previas-del-prestashop">Eliminamos instalaciones previas del prestashop</h4>
+<pre><code>rm -rf /tmp/prestashop*
+</code></pre>
+<h4 id="descargamos-el-codigo-fuente-de-prestashop">Descargamos el codigo fuente de prestashop</h4>
+<pre><code>wget https://github.com/PrestaShop/PrestaShop/releases/download/8.1.2/prestashop_8.1.2.zip -P /tmp
+</code></pre>
+<h4 id="instalar-unzip">Instalar unzip</h4>
+<pre><code>apt install unzip -y
+</code></pre>
+<h4 id="borramos-las-cosas-previas-al-varwwwhtml">Borramos las cosas previas al /var/www/html</h4>
+<pre><code>rm -rf /var/www/html/* 
+</code></pre>
+<h4 id="copiamos-el-archivo-de-phppsinfo">Copiamos el archivo de phppsinfo</h4>
+<pre><code>cp ../php/phppsinfo.php /var/www/html
+</code></pre>
+<h4 id="descargar-los-archivos-de-dentro-del-zip-descargado-anteriormente">Descargar los archivos de dentro del zip descargado anteriormente</h4>
+<pre><code>unzip /tmp/prestashop_8.1.2.zip -d /tmp/prestashop
+unzip /tmp/prestashop/prestashop.zip -d /var/www/html
+</code></pre>
+<h4 id="instalamos-las-extensiones-php-para-poner-lo-recomendado-de-la-pagina-del-phppsinfophp">Instalamos las extensiones php para poner lo recomendado de la pagina del phppsinfo.php</h4>
+<pre><code>apt install php-bcmath php-curl php-gd php-intl php-mbstring php-xml php-dom  php-zip -y
+</code></pre>
+<h4 id="corregimos-los-archivos-con-el-comando-set">Corregimos los archivos con el comando set</h4>
+<pre><code>sed -i &quot;s/;max_input_vars = 1000/max_input_vars = $max_input_vars/&quot; /etc/php/8.1/apache2/php.ini
+sed -i &quot;s/memory_limit = 128/memory_limit = $memory_limit/&quot; /etc/php/8.1/apache2/php.ini
+sed -i &quot;s/post_max_size = 8/post_max_size = $post_max_size/&quot; /etc/php/8.1/apache2/php.ini
+sed -i &quot;s/upload_max_filesize = 2/upload_max_filesize = $upload_max_filesize/&quot; /etc/php/8.1/apache2/php.ini
+</code></pre>
+<h4 id="reiniciamos-el-servicio-de-apache_1">Reiniciamos el servicio de apache</h4>
+<pre><code>systemctl restart apache2
+</code></pre>
+<h4 id="copiamos-el-nuevo-archivo-htaccess">Copiamos el nuevo archivo .htaccess</h4>
+<pre><code>cp ../htaccess/.htaccess /var/www/html
+</code></pre>
+<h4 id="cambiamos-la-informacion-de-los-directorios-para-que-todos-puedan-escribir">Cambiamos la información de los directorios para que todos puedan escribir</h4>
+<pre><code>chown -R www-data:www-data /var/www/html
+</code></pre>
+<h4 id="instalamos-prestashop">Instalamos Prestashop</h4>
+<pre><code>php /var/www/html/install/index_cli.php \
+  --name=$PRESTASHOP_NAME \
+  --country=$PRESTASHOP_COUNTRY \
+  --firstname=$PRESTASHOP_FNAME \
+  --lastname=$PRESTASHOP_LNAME \
+  --password=$PRESTASHOP_PASSWORD \
+  --prefix=$PRESTASHOP_PREFIX \
+  --db_server=$PRESTASHOP_DB_SERVER \
+  --db_name=$PRESTASHOP_DB_NAME \
+  --db_user=$PRESTASHOP_DB_USER \
+  --db_password=$PRESTASHOP_DB_PASSWORD \
+  --domain=$CB_DOMAIN \
+  --email=$CB_MAIL \
+  --language=$LANGUAGE \
+  --ssl=1
+</code></pre>
+<h4 id="borrar-la-carpeta-de-install-por-seguridad">Borrar la carpeta de install por seguridad</h4>
+<pre><code>  rm -rf /var/www/html/install
+</code></pre>
+<h3 id="y-el-archivo-env-con-las-variables-necesarias-para-ejecurtar-el-deploy-es-el-siguiente">Y el archivo .env con las variables necesarias para ejecurtar el deploy es el siguiente:</h3>
+<pre><code># Configuramos las variables
+  WORDPRESS_TITLE=&quot;Sitio web de IAW Jose&quot;
+  WORDPRESS_ADMIN_USER=admin 
+  WORDPRESS_ADMIN_PASS=admin 
+  WORDPRESS_ADMIN_EMAIL=josefco@iaw.com
+
+  CB_MAIL=josefco@iaw.com
+  CB_DOMAIN=practica8prestasho.ddns.net
+
+  TEMA=sydney
+  PLUGIN=bbpress
+  PlUGIN2=wps-hide-login
+
+  max_input_vars=5000
+  memory_limit=256M
+  post_max_size=128M
+  upload_max_filesize=128M
+
+  PRESTASHOP_NAME=Prestashop_01.8
+  PRESTASHOP_COUNTRY=ES
+  PRESTASHOP_FNAME=Jose
+  PRESTASHOP_LNAME=Francisco
+  PRESTASHOP_PASSWORD=Jfleon.450
+  PRESTASHOP_PREFIX=prestashop
+  PRESTASHOP_DB_SERVER=localhost
+  LANGUAGE=es
+  PRESTASHOP_DB_NAME=prestashop
+  PRESTASHOP_DB_USER=josefco
+  PRESTASHOP_DB_PASSWORD=Jfleon.450
+  PRESTASHOP_DB_HOST=localhost
+  IP_CLIENTE_MYSQL=localhost
+</code></pre>
+<h3 id="una-vez-ejecutado-todo-accederiamos-a-nuestro-dominio-y-ya-tendriamos-prestashop-instalado">Una vez ejecutado todo accederiamos a nuestro dominio y ya tendriamos prestashop instalado.</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
