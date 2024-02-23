@@ -1,15 +1,22 @@
-# Practica-01-08-IAW Jose Francisco León López
-## En esta práctica vamos a ver como instalar prestashop en nuestra máquina de Amazon:
-### Nuestra máquina de amazon debería estar así configurada:
-![1](https://github.com/JoseFco04/practica-01-08-IAW/assets/145347148/49defe99-c15d-4c10-8df8-48d8247b58f1)
-### Y tendriamos que crearle un grupo de seguridad para esta práctica y añadirlo cuando estemos instalando la instancia. Debería verse así:
-![2](https://github.com/JoseFco04/practica-01-08-IAW/assets/145347148/5c3dc2b7-c600-4817-9b6f-f95d5cdf1ce4)
-### Ahora para empezar debemos usar el archivo phppsinfo.php que descargamos previamente y añadirlo a nuestra carpeta de archivos php. EL código del archivo esta en el repositorio de esta práctica.
+# Practica-03-IAW
+### Para esta práctica vamos a crear una instancia de ubuntu, pulsamos en lanzar instancia y seleccionamos ubuntu 
+![cap 1 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/37b6124d-4994-4a13-b8d9-1ba57372f835)
 
-### Lo siguiente que tenemos que hacer es configurar el script del install_lamp que debemos ejecutar antes de hacer la práctica que paso por paso se ve así:
-#### Mostramos todos los comandos que se van ejecutando
+### Le ponemos de tamaño small la máquina.
+![cap 2 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/41e28934-8db1-495c-b49a-b377cfeec1bc)
+
+### Le permitimos el tráfico http y https para que nos añada los puertos de seguridad directamente 
+![cap 3 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/17ae3a20-aa69-4628-b792-f101c0fc4a08)
+
+### Después de esto le asignamos una ip pública o ip elástica y empezamos con los scripts.
+
+### Tenemos tres scripts que vamos a copiar de la práctica uno: es script del install_lamp, el de configuracion y el de php.
+
+### El script del lamp es este paso por paso :
+
+#### Muestra todos los comandos que se van ejecutando
 ~~~
-set -ex
+set -x
 ~~~
 #### Actualizamos los repositorios
 ~~~
@@ -17,29 +24,31 @@ apt update
 ~~~
 #### Actualizamos los paquetes
 ~~~
-#apt upgrade -y
+#### apt upgrade -y
 ~~~
-#### Instalamos el servidor web Apache
+#### instalamos el servidor web Apache
 ~~~
-sudo apt install apache2 -y
+apt install apache2 -y
 ~~~
-#### Instalamos el gestor de bases de datos MySQL
+#### Instalamos e sistema gestor de base de datos de mysql
 ~~~
-sudo apt install mysql-server -y
+apt install mysql-server -y
 ~~~
-#### Instalamos PHP
+#### mysql -u $DB_USER -p $DP_PASSWD < .../sql/database.sql
+
+#### Instalamos  PHP
 ~~~
 apt install php libapache2-mod-php php-mysql -y
 ~~~
-#### Copiamos el archivo conf de apache 
+#### Copiar el archivo de configuración de Apache 
 ~~~
 cp ../conf/000-default.conf /etc/apache2/sites-available
 ~~~
-#### Reiniciamos el servicio de Apache
+#### Reiniciamos el servicio Apache
 ~~~
 systemctl restart apache2
 ~~~
-#### Copiamos el archivo de php 
+#### Copiamos el archivo de prueba de php
 ~~~
 cp ../php/index.php /var/www/html
 ~~~
@@ -47,201 +56,94 @@ cp ../php/index.php /var/www/html
 ~~~
 chown -R www-data:www-data /var/www/html
 ~~~
-### Previamente deberiamos haber tenido los archivos de configuración 000-default.conf y el .htaccess configurados en la máquina. El 000default se debería de ver así:
+### El archivo de cofiguracion 000-default-conf es este:
 ~~~
 ServerSignature Off
 ServerTokens Prod
-<VirtualHost *:80>
-  #ServerName www.example.com
-  DocumentRoot /var/www/html
-  DirectoryIndex index.php index.html
 
-  <Directory "/var/www/html">
-    AllowOverride All
-  </Directory>
+<VirtualHost *:80>
+#ServerName www.example.com
+DocumentRoot /var/www/html
+
+  DirectoryIndex index.php index.html
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ~~~
-### Y el htaccess así:
+### El archivo de php
 ~~~
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-# END WordPress
+<?php
+
+phpinfo();
+
+?>
 ~~~
-### También tenemos que crear un script para el letsencrypt para el tema del dominio y las claves de seguridad que ya hemos usado en practicas anteriores. Paso por paso el script es así:
-#### Volvemos a mostrar todos los comandos que se van ejecutando
-~~~
-set -ex
-~~~
-#### Actualizamos los repositorios
-~~~
-apt update
-~~~
-#### Actualizamos los paquetes
-~~~
-#apt upgrade -y
-~~~
-#### Importamos el archivo de variables .env
-~~~
-source .env
-~~~
-### Instalamos y actualizamos snapd
-~~~
-snap install core && snap refresh core
-~~~
-#### Eliminamos cualquier instalación previa de certbot con apt
-~~~
-apt remove certbot
-~~~
-#### Instalamos la aplicación certbot
-~~~
-snap install --classic certbot
-~~~
-#### Creamos un alias para la aplicación certbot
-~~~
-ln -fs /snap/bin/certbot /usr/bin/certbot
-~~~
-#### Ejecutamos el comando certbot
-~~~
-certbot --apache -m $CB_MAIL --agree-tos --no-eff-email -d $CB_DOMAIN --non-interactive
-~~~
-### Y lo máas importante de la práctica y lo que realmente cambia de las otras es el deploy del prestashop y el .env que es el archivo con las variables. El deploy paso por paso es así:
-#### Volvemos a mostrar todos los comandos que se van ejecutando
-~~~
-set -ex
-~~~
-#### Actualizamos los repositorios
-~~~
-apt update
-~~~
-#### Actualizamos los paquetes
-~~~
-#apt upgrade -y
-~~~
-#### Importamos el archivo de variables .env
-~~~
-source .env
-~~~
-#### Creamos la base de datos y el usuario de la base de datos 
-~~~
-mysql -u root <<< "DROP DATABASE IF EXISTS $PRESTASHOP_DB_NAME"
-mysql -u root <<< "CREATE DATABASE $PRESTASHOP_DB_NAME"
-mysql -u root <<< "DROP USER IF EXISTS $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER"
-mysql -u root <<< "CREATE USER $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER IDENTIFIED BY '$PRESTASHOP_DB_PASSWORD'"
-mysql -u root <<< "GRANT ALL PRIVILEGES ON $PRESTASHOP_DB_NAME.* TO $PRESTASHOP_DB_USER@$PRESTASHOP_DB_SERVER"
-~~~
-#### Eliminamos instalaciones previas del prestashop
-~~~
-rm -rf /tmp/prestashop*
-~~~
-#### Descargamos el codigo fuente de prestashop
-~~~
-wget https://github.com/PrestaShop/PrestaShop/releases/download/8.1.2/prestashop_8.1.2.zip -P /tmp
-~~~
-#### Instalar unzip
-~~~
-apt install unzip -y
-~~~
-#### Borramos las cosas previas al /var/www/html
-~~~
-rm -rf /var/www/html/* 
-~~~
-#### Copiamos el archivo de phppsinfo
-~~~
-cp ../php/phppsinfo.php /var/www/html
-~~~
-#### Descargar los archivos de dentro del zip descargado anteriormente
-~~~
-unzip /tmp/prestashop_8.1.2.zip -d /tmp/prestashop
-unzip /tmp/prestashop/prestashop.zip -d /var/www/html
-~~~
-#### Instalamos las extensiones php para poner lo recomendado de la pagina del phppsinfo.php 
-~~~
-apt install php-bcmath php-curl php-gd php-intl php-mbstring php-xml php-dom  php-zip -y
-~~~
-#### Corregimos los archivos con el comando set
-~~~
-sed -i "s/;max_input_vars = 1000/max_input_vars = $max_input_vars/" /etc/php/8.1/apache2/php.ini
-sed -i "s/memory_limit = 128/memory_limit = $memory_limit/" /etc/php/8.1/apache2/php.ini
-sed -i "s/post_max_size = 8/post_max_size = $post_max_size/" /etc/php/8.1/apache2/php.ini
-sed -i "s/upload_max_filesize = 2/upload_max_filesize = $upload_max_filesize/" /etc/php/8.1/apache2/php.ini
-~~~
-#### Reiniciamos el servicio de apache
-~~~
-systemctl restart apache2
-~~~
-#### Copiamos el nuevo archivo .htaccess
-~~~
-cp ../htaccess/.htaccess /var/www/html
-~~~
-#### Cambiamos la información de los directorios para que todos puedan escribir
-~~~
-chown -R www-data:www-data /var/www/html
-~~~
-#### Instalamos Prestashop
-~~~
-php /var/www/html/install/index_cli.php \
-  --name=$PRESTASHOP_NAME \
-  --country=$PRESTASHOP_COUNTRY \
-  --firstname=$PRESTASHOP_FNAME \
-  --lastname=$PRESTASHOP_LNAME \
-  --password=$PRESTASHOP_PASSWORD \
-  --prefix=$PRESTASHOP_PREFIX \
-  --db_server=$PRESTASHOP_DB_SERVER \
-  --db_name=$PRESTASHOP_DB_NAME \
-  --db_user=$PRESTASHOP_DB_USER \
-  --db_password=$PRESTASHOP_DB_PASSWORD \
-  --domain=$CB_DOMAIN \
-  --email=$CB_MAIL \
-  --language=$LANGUAGE \
-  --ssl=1
-~~~
-#### Borrar la carpeta de install por seguridad
-~~~
-  rm -rf /var/www/html/install
-~~~
-### Y el archivo .env con las variables necesarias para ejecurtar el deploy es el siguiente:
+### Después tenemos nuestro archivo .env para guardar nuestras variables
 ~~~
 # Configuramos las variables
-  WORDPRESS_TITLE="Sitio web de IAW Jose"
-  WORDPRESS_ADMIN_USER=admin 
-  WORDPRESS_ADMIN_PASS=admin 
-  WORDPRESS_ADMIN_EMAIL=josefco@iaw.com
-
-  CB_MAIL=josefco@iaw.com
-  CB_DOMAIN=practica8prestasho.ddns.net
-
-  TEMA=sydney
-  PLUGIN=bbpress
-  PlUGIN2=wps-hide-login
-
-  max_input_vars=5000
-  memory_limit=256M
-  post_max_size=128M
-  upload_max_filesize=128M
-  
-  PRESTASHOP_NAME=Prestashop_01.8
-  PRESTASHOP_COUNTRY=ES
-  PRESTASHOP_FNAME=Jose
-  PRESTASHOP_LNAME=Francisco
-  PRESTASHOP_PASSWORD=Jfleon.450
-  PRESTASHOP_PREFIX=prestashop
-  PRESTASHOP_DB_SERVER=localhost
-  LANGUAGE=es
-  PRESTASHOP_DB_NAME=prestashop
-  PRESTASHOP_DB_USER=josefco
-  PRESTASHOP_DB_PASSWORD=Jfleon.450
-  PRESTASHOP_DB_HOST=localhost
-  IP_CLIENTE_MYSQL=localhost
+#-------------------------------------------
+DB_NAME=aplicacion
+DB_USER=usuario
+DB_PASSWORD=password
 ~~~
-### Una vez ejecutado todo accederiamos a nuestro dominio y ya tendriamos prestashop instalado.
+### Y el ultimo es el script del deploy.sh que paso por paso hace esto:
+
+#### Muestra todos los comandos que se van ejecutando  
+~~~
+set -x
+~~~
+#### Importamos las variables 
+~~~
+source .env 
+~~~
+#### Actualizamos los repositorios 
+~~~
+apt  update 
+~~~
+#### Actualizamos todos los paquetes 
+~~~
+#apt upgrade -y 
+~~~
+#### Eliminamos descargas previas del repositorio 
+~~~
+rm -rf /tmp/iaw-practica-lamp
+~~~
+#### Clonamos el repositorio con el codigo fuente de la aplicacion
+~~~
+git clone https://github.com/josejuansanchez/iaw-practica-lamp /tmp/iaw-practica-lamp
+~~~
+#### Movemos el codigo fuente de la aplicaciona /var/www/html
+~~~
+mv /tmp/iaw-practica-lamp/src/* /var/www/html
+~~~
+#### Configuramos el archivo sql para que no de error al poner una base de datos distinata a lamp_db
+~~~
+sed -i "s/lamp_db/$DB_NAME/g" /tmp/iaw-practica-lamp/db/database.sql
+~~~
+#### Configuramos el archivo config.php de la aplicación
+~~~
+sed -i "s/database_name_here/$DB_NAME/" /var/www/html/config.php
+sed -i "s/username_here/$DB_USER/" /var/www/html/config.php
+sed -i "s/password_here/$DB_PASSWORD/" /var/www/html/config.php
+~~~
+#### Importamos el script de base de datos 
+~~~
+mysql -u root < /tmp/iaw-practica-lamp/db/database.sql
+~~~
+#### Creamos el usuariob de la base de datos y le asignamos privilegios
+~~~
+mysql -u root <<< "DROP USER IF EXISTS $DB_USER@'%'"
+mysql -u root <<< "CREATE USER $DB_USER@'%' IDENTIFIED BY '$DB_PASSWORD'"
+mysql -u root <<< "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'%'"
+~~~
+#### Y al ejecutar el script y menternos en el navegador en la ip elástica nos saldría la aplicación en la que podemos meter las bases de datos que queramos.
+#### Así se vería la página web
+![cap p32](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/a3729289-5188-4a4b-847c-5becd1898216)
+#### Añadimos una base de datos 
+![cap p322](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/c7f97637-8cff-44a6-bb25-eac944111c35)
+#### Y nos saldría en la página.
+![cap p323](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/2fcfd9c3-e57e-4477-9007-35397fa07416)
+
+
 
