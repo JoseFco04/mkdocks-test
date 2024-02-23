@@ -4,4 +4,11 @@ nav:
     - Principal: index.md
     - Acerca de: about.md
     - Blog: blog.md
+    - Práctica 01: Practica-01.md
+    - Práctica 08: Practica-08.md
 theme: material
+    palette:
+        scheme: purple
+    font:
+        code: Open Sans
+    language: es
