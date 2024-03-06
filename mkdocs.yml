@@ -4,7 +4,7 @@ nav:
     - Principal: index.md
     - Acerca de: about.md
     - Práctica 01: Practica-01.md
-    - Práctica 08: Practica-08.md
+    - Práctica 03: Practica-03.md
 
 theme: 
     name: material
@@ -14,3 +14,5 @@ theme:
         code: Montserrat
     language: es
     logo: images/logo.png
+    features:
+        - navigation.tabs

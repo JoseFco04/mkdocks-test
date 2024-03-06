@@ -1,12 +1,12 @@
 # Practica-03-IAW
 ### Para esta práctica vamos a crear una instancia de ubuntu, pulsamos en lanzar instancia y seleccionamos ubuntu 
-![cap 1 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/37b6124d-4994-4a13-b8d9-1ba57372f835)
+![](images/cap 1 p3.png)
 
 ### Le ponemos de tamaño small la máquina.
-![cap 2 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/41e28934-8db1-495c-b49a-b377cfeec1bc)
+![](images/cap 2 p3.png)
 
 ### Le permitimos el tráfico http y https para que nos añada los puertos de seguridad directamente 
-![cap 3 p3](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/17ae3a20-aa69-4628-b792-f101c0fc4a08)
+![](images/cap 1 p3.png)
 
 ### Después de esto le asignamos una ip pública o ip elástica y empezamos con los scripts.
 
@@ -139,11 +139,11 @@ mysql -u root <<< "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'%'"
 ~~~
 #### Y al ejecutar el script y menternos en el navegador en la ip elástica nos saldría la aplicación en la que podemos meter las bases de datos que queramos.
 #### Así se vería la página web
-![cap p32](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/a3729289-5188-4a4b-847c-5becd1898216)
+![](images/cap p32.png)
 #### Añadimos una base de datos 
-![cap p322](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/c7f97637-8cff-44a6-bb25-eac944111c35)
+![](images/cap p322.png)
 #### Y nos saldría en la página.
-![cap p323](https://github.com/JoseFco04/practica-03-IAW/assets/145347148/2fcfd9c3-e57e-4477-9007-35397fa07416)
+![](images/cap p323.png)
 
 
 
